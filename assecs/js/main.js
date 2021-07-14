@@ -22,6 +22,7 @@ const ikkinchi = document.querySelector('.ikkinchi')
 const profileIconButtonElem = document.querySelector('.right__unchun')
 const smilebtn = document.querySelector('.emoji__button')
 
+let storagedata = JSON.parse(localStorage.getItem('mydata'))
 
 const emojies = ["😀", "😋", "😅", "😏", "😀", "😃", "😄", "😁", "😆", "😄", "😅", "😂", "😏", "😞", "😅", "😚", "🙊", "😌", "😀", "😋", "😆", "😐", "😕", "🥶", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🤭", "🤫", "🤥", "😶", "😐", "😑", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😵", "🤐", "🥴", "🤚", "🖐", "✋"]
 
@@ -60,7 +61,7 @@ shedowElem.addEventListener('click', () => {
 
 //kontakt
 
-let user = {
+let user =(localStorage.getItem('mydata')) ? storagedata:{
     config: {
         background: 'red',
         myName: 'Javohir',
