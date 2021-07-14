@@ -133,8 +133,7 @@ let user =(localStorage.getItem('mydata')) ? storagedata:{
     ]
 }
 
-let malumot = JSON.parse(localStorage.getItem("data")) || user
-localStorage.setItem("data", JSON.stringify(malumot))
+localStorage.setItem('mydata', JSON.stringify(data))
 
 //li click bolishi
 const messageListElem = document.querySelector('.message__list')
